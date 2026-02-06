@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #d63384;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #ffcccc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #b30059;
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 20%;
+            height: auto;
+        }
+        button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #e60073;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #e60073;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            animation: pop 0.4s ease;
+            max-width: 300px;
+        }
+        .popup-content img {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        @keyframes pop {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Rose Day!</h1>
+        <p>February 7th: A day to bloom with love.</p>
+    </header>
+    <main>
+        <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=765&auto=format&fit=crop"
+             alt="Beautiful Roses">
+
+        <p>
+            One rose + You = My favorite combination 💕,<br>
+            Your smile is sweeter than any flower,<br>
+            You turn ordinary days into beautiful ones,<br>
+            And so are you!
+        </p>
+        <button id="roseBtn">Send a Rose 🌹</button>
+
+        <div id="message"></div>
+    </main>
+    <footer>
+        <p>For my GUNNU ❤️</p>
+    </footer>
+    <div class="popup" id="rosePopup">
+        <div class="popup-content">
+            <img src="https://as1.ftcdn.net/jpg/17/37/13/10/1000_F_1737131053_KVeOOr3aS3IX13JEmYvHIJTNT7oDhN10.webp" alt="Rose" height="20%">
+            <h3>For You 💖</h3>
+            <p>🌹 A rose full of love and smiles 🌹</p>
+            <p><small>(FOR MY BACCHA💖)</small></p>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById("roseBtn");
+        const msg = document.getElementById("message");
+        const popup = document.getElementById("rosePopup");
+        btn.addEventListener("click", function () {
+            msg.innerHTML = "🌹 A virtual rose for you! You are my sunshine 💖✨";
+            popup.style.display = "flex";
+        });
+        popup.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+    </script>
+</body>
+</html>
